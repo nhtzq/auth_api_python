@@ -3,7 +3,6 @@ from typing import List
 
 
 class User:
-
     def __init__(self, username: str, password: str) -> None:
         self.id = gen_id()
         # To simplify, usernames are case-insensitive and are converted to lower case in storage
@@ -25,12 +24,8 @@ class User:
     def get_roles(self) -> List[str]:
         return list(self.roles)
 
-    # def validate_password(self, input: str) -> bool:
-    #     return encrypt_password(input, self.password_salt) == self.password_hash
-
 
 class Role:
-
     def __init__(self, name: str) -> None:
         # To simplify, the "name" attribute is a unique identifier. Role name is also case-insensitive and are converted to lower case in storage
         self.name = name.strip().lower()

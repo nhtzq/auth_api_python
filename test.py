@@ -12,7 +12,6 @@ class TestAuth(unittest.TestCase):
         self.password = '123456'
         self.role_name_1 = 'admin'
         self.role_name_2 = 'customer'
-        # self.mocked_now_ts = 1654041600  # 2022-06-01 12:00:00 AM GMT
 
     def test_create_user(self):
         user = self.auth.create_user(self.username, self.password)
